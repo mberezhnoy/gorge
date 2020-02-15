@@ -5,7 +5,6 @@ on:
       - ci
 env:
   GO111MODULE: on
-  GOPROXY: https://goproxy.io
 jobs:
   build_proj:
     name: Build proj from sources
@@ -56,8 +55,4 @@ jobs:
         run: make download
 
       - name: Test
-        run: |
-          make tools
-          make test
-          make lint
-          make typescript
+        run: ls -la
