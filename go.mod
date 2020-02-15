@@ -35,6 +35,8 @@ require (
 	github.com/mattn/go-nulltype v0.0.0-20190219090336-3e10e98e82af
 	github.com/mattn/go-runewidth v0.0.8 // indirect
 	github.com/mattn/go-sqlite3 v2.0.3+incompatible
+	github.com/nats-io/go-nats v0.0.0-00010101000000-000000000000 // indirect
+	github.com/nats-io/nats.go v1.9.1 // indirect
 	github.com/octago/sflags v0.2.0
 	github.com/olekukonko/tablewriter v0.0.4
 	github.com/opencontainers/runc v0.1.1 // indirect
@@ -53,3 +55,5 @@ require (
 	gopkg.in/retry.v1 v1.0.3 // indirect
 	gopkg.in/yaml.v2 v2.2.8 // indirect
 )
+
+replace github.com/nats-io/go-nats => github.com/nats-io/nats.go v1.8.1
