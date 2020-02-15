@@ -57,9 +57,10 @@ require (
 )
 
 replace (
+	github.com/Sirupsen/logrus => github.com/sirupsen/logrus v1.4.2
+	github.com/codegangsta/cli => github.com/urfave/cli v1.22.2
+	github.com/containerd/containerd v1.3.0-0.20190507210959-7c1e88399ec0 => github.com/containerd/containerd v1.3.3
 	github.com/nats-io/go-nats => github.com/nats-io/nats.go v1.8.1
 	google.golang.org/cloud => cloud.google.com/go v0.53.0
 	google.golang.org/cloud/storage => cloud.google.com/go/storage v1.5.0
-	github.com/Sirupsen/logrus => github.com/sirupsen/logrus v1.4.2
-	github.com/codegangsta/cli => github.com/urfave/cli v1.22.2
 )
