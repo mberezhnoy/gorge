@@ -18,6 +18,7 @@ jobs:
           echo "$HOME"
           ls -la $GITHUB_WORKSPACE
           ls -la $HOME
+          ls -la /github/home/
           sudo mkdir -p /usr/lib/x86_64-linux-gnu/
           sudo cp $HOME/libproj/* /usr/lib/x86_64-linux-gnu/
           rm -rf $HOME/libproj

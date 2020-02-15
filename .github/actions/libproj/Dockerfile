@@ -7,4 +7,6 @@ RUN mkdir -p ${GITHUB_WORKSPACE}/libproj && \
     echo $GITHUB_WORKSPACE && \
     echo $HOME && \
     mkdir -p ${HOME}/libproj && \
-    cp /usr/lib/libproj.*a ${HOME}/libproj/
+    cp /usr/lib/libproj.*a ${HOME}/libproj/ && \
+    mkdir -p /github/home/libproj && \
+    cp /usr/lib/libproj.*a /github/home/libproj/
