@@ -5,10 +5,10 @@ go 1.13
 replace (
 	github.com/Sirupsen/logrus => github.com/sirupsen/logrus v1.4.2
 	github.com/codegangsta/cli => github.com/urfave/cli v1.22.2
-	github.com/containerd/containerd v1.3.0-0.20190507210959-7c1e88399ec0 => github.com/containerd/containerd v1.3.3
-	github.com/docker/docker@v1.14.0-0.20190319215453-e7b5f7dbe98c => github.com/docker/docker v1.4.2-0.20190319215453-e7b5f7dbe98c
+	github.com/containerd/containerd v1.3.0-0.20190507210959-7c1e88399ec0 => github.com/containerd/containerd v1.3.0-beta.2.0.20190823190603-4a2f61c4f2b4
+	github.com/docker/docker => github.com/moby/moby v0.7.3-0.20190826074503-38ab9da00309
 	github.com/nats-io/go-nats => github.com/nats-io/nats.go v1.8.1
-	golang.org/x/crypto v0.0.0-20190129210102-0709b304e793 => golang.org/x/crypto v0.0.0-20200214034016-1d94cc7ab1c6
+	golang.org/x/crypto v0.0.0-20190129210102-0709b304e793 => golang.org/x/crypto v0.0.0-20180904163835-0709b304e793
 	google.golang.org/cloud => cloud.google.com/go v0.53.0
 	google.golang.org/cloud/storage => cloud.google.com/go/storage v1.5.0
 )
@@ -35,7 +35,6 @@ require (
 	github.com/golangci/golangci-lint v1.23.6
 	github.com/gomodule/redigo v2.0.0+incompatible
 	github.com/google/uuid v1.1.1
-	github.com/gotestyourself/gotestyourself v2.2.0+incompatible // indirect
 	github.com/im7mortal/UTM v1.2.0
 	github.com/jmoiron/sqlx v1.2.1-0.20191203222853-2ba0fc60eb4a
 	github.com/juju/go4 v0.0.0-20160222163258-40d72ab9641a // indirect
@@ -46,11 +45,11 @@ require (
 	github.com/mattn/go-nulltype v0.0.0-20190219090336-3e10e98e82af
 	github.com/mattn/go-runewidth v0.0.8 // indirect
 	github.com/mattn/go-sqlite3 v2.0.3+incompatible
+	github.com/moby/buildkit v0.6.3 // indirect
 	github.com/nats-io/go-nats v0.0.0-00010101000000-000000000000 // indirect
 	github.com/nats-io/nats.go v1.9.1 // indirect
 	github.com/octago/sflags v0.2.0
 	github.com/olekukonko/tablewriter v0.0.4
-	github.com/opencontainers/runc v0.1.1 // indirect
 	github.com/ory/dockertest v3.3.5+incompatible
 	github.com/pkg/errors v0.9.1
 	github.com/robfig/cron/v3 v3.0.1
