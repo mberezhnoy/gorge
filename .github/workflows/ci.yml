@@ -28,8 +28,7 @@ jobs:
 
       - name: Install libproj
         run: |
-          sudo mkdir -p /usr/lib/x86_64-linux-gnu/
-          sudo cp $GITHUB_WORKSPACE/libproj/* /usr/lib/x86_64-linux-gnu/
+          sudo cp $GITHUB_WORKSPACE/libproj/* /usr/lib
 
       - name: setup env
         shell: bash

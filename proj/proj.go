@@ -1,7 +1,7 @@
 package proj
 
 /*
-#cgo LDFLAGS: /usr/lib/x86_64-linux-gnu/libproj.a
+#cgo LDFLAGS: -lproj
 #cgo LDFLAGS: -lm
 #include "proj_go.h"
 */
