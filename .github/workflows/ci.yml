@@ -15,7 +15,7 @@ jobs:
         run: |
           curl https://download.osgeo.org/proj/proj-${PROJ_VERSION}.tar.gz | tar -xz
           curl -o datum.zip https://download.osgeo.org/proj/proj-datumgrid-${PROJ_DATUM}.zip
-          unzip datum.zip -d proj-${PROJ_VERSION}/data
+          unzip -o datum.zip -d proj-${PROJ_VERSION}/data
           rm -f datum.zip
       - name: build
         run: |
