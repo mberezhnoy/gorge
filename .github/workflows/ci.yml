@@ -17,7 +17,7 @@ jobs:
         id: cache-libproj
         uses: actions/cache@v1
         with:
-          path: $GITHUB_WORKSPACE/libproj
+          path: ${{ github.workspace }}/libproj
           key: ${{ runner.os }}-libproj-6_3_1 # 6.3.1 stands for libproj version
           restore-keys: |
             ${{ runner.os }}-libproj-
@@ -30,11 +30,11 @@ jobs:
         run: |
           sudo cp $GITHUB_WORKSPACE/libproj/* /usr/lib
 
-      - name: setup env
-        shell: bash
-        run: |
-          echo "::set-env name=GOPATH::${{ github.workspace }}/go"
-          echo "::add-path::${{ github.workspace }}/go/bin"
+      # - name: setup env
+      #   shell: bash
+      #   run: |
+      #     echo "::set-env name=GOPATH::${{ github.workspace }}/go"
+      #     echo "::add-path::${{ github.workspace }}/go/bin"
 
       - name: Install Go
         uses: actions/setup-go@v2-beta
