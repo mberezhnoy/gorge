@@ -19,8 +19,8 @@ jobs:
           rm -f datum.zip
       - name: Install requirements
         run: |
-          apt-get update -y
-          apt-get install -y --fix-missing --no-install-recommends sqlite3
+          sudo apt-get update -y
+          sudo apt-get install -y --fix-missing --no-install-recommends sqlite3
       - name: build
         run: |
           cd proj-${PROJ_VERSION}
