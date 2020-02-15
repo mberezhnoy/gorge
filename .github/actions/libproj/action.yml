@@ -1,0 +1,6 @@
+# action.yml
+name: "Fetch proj"
+description: "Extracts libproj static library from official docker image"
+runs:
+  using: "docker"
+  image: "Dockerfile"
