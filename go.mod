@@ -5,9 +5,8 @@ go 1.13
 require (
 	github.com/AlecAivazis/survey/v2 v2.0.5
 	github.com/EDDYCJY/fake-useragent v0.2.0
-	github.com/PuerkitoBio/goquery v1.5.0
-	github.com/alicebob/miniredis/v2 v2.11.1
-	github.com/andybalholm/cascadia v1.1.0 // indirect
+	github.com/PuerkitoBio/goquery v1.5.1
+	github.com/alicebob/miniredis/v2 v2.11.2
 	github.com/antchfx/htmlquery v1.2.2
 	github.com/antchfx/xpath v1.1.4 // indirect
 	github.com/antchfx/xquery v0.0.0-20180515051857-ad5b8c7a47b0
@@ -46,9 +45,8 @@ require (
 	github.com/spf13/cobra v0.0.5
 	github.com/stretchr/testify v1.4.0
 	github.com/tkrajina/typescriptify-golang-structs v0.0.10
-	github.com/yuin/gopher-lua v0.0.0-20191220021717-ab39c6098bdb // indirect
-	golang.org/x/net v0.0.0-20200114155413-6afb5195e5aa
-	golang.org/x/sys v0.0.0-20200124204421-9fbb57f87de9 // indirect
+	golang.org/x/net v0.0.0-20200202094626-16171245cfb2
+	golang.org/x/sys v0.0.0-20200212091648-12a6c2dcc1e4 // indirect
 	golang.org/x/text v0.3.2
 	google.golang.org/appengine v1.6.5 // indirect
 	gopkg.in/errgo.v1 v1.0.1 // indirect
