@@ -60,7 +60,9 @@ replace (
 	github.com/Sirupsen/logrus => github.com/sirupsen/logrus v1.4.2
 	github.com/codegangsta/cli => github.com/urfave/cli v1.22.2
 	github.com/containerd/containerd v1.3.0-0.20190507210959-7c1e88399ec0 => github.com/containerd/containerd v1.3.3
+	github.com/docker/docker@v1.14.0-0.20190319215453-e7b5f7dbe98c => github.com/docker/docker v1.13.1
 	github.com/nats-io/go-nats => github.com/nats-io/nats.go v1.8.1
+	golang.org/x/crypto v0.0.0-20190129210102-0709b304e793 => golang.org/x/crypto v0.0.0-20200214034016-1d94cc7ab1c6
 	google.golang.org/cloud => cloud.google.com/go v0.53.0
 	google.golang.org/cloud/storage => cloud.google.com/go/storage v1.5.0
 )
