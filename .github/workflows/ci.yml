@@ -30,8 +30,10 @@ jobs:
         env:
           DESTDIR: /build
         run: |
-          cd proj-${PROJ_VERSION} \
-          && ./autogen.sh \
+          ls -la
+          cd proj-${PROJ_VERSION}
+          ls -la
+          ./autogen.sh \
           && ./configure --prefix=/usr \
           && make -j$(nproc) \
           && make install
