@@ -56,7 +56,9 @@ require (
 	gopkg.in/yaml.v2 v2.2.8 // indirect
 )
 
-replace github.com/nats-io/go-nats => github.com/nats-io/nats.go v1.8.1
-
-replace google.golang.org/cloud => cloud.google.com/go v0.53.0
-replace google.golang.org/cloud/storage => cloud.google.com/go/storage v1.5.0
+replace (
+	github.com/nats-io/go-nats => github.com/nats-io/nats.go v1.8.1
+	google.golang.org/cloud => cloud.google.com/go v0.53.0
+	google.golang.org/cloud/storage => cloud.google.com/go/storage v1.5.0
+	github.com/Sirupsen/logrus => github.com/sirupsen/logrus v1.4.2
+ )
