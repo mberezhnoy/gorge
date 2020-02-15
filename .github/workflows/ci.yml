@@ -15,6 +15,6 @@ jobs:
       - name: Install lib
         run: |
           sudo mkdir -p /usr/lib/x86_64-linux-gnu/
-          sudo cp ./proj/* /usr/lib/x86_64-linux-gnu/
-          rm -rf ./proj
-          ls -la /usr/lib/x86_64-linux-gnu/
+          sudo cp ./libproj/* /usr/lib/x86_64-linux-gnu/
+          rm -rf ./libproj
+          ls -la /usr/lib/x86_64-linux-gnu/ | grep proj
