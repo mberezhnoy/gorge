@@ -1,10 +1,10 @@
 download:
 	go mod download
 
-tools: download
+tools:
 	cat tools.go | grep _ | awk -F'"' '{print $$2}' | xargs -tI % go install %
 
-generate: tools
+generate:
 	go-bindata -o storage/migrations/sqlite/sqlite_migrations.go -pkg sqlite_migrations -prefix "storage/migrations/sqlite/" storage/migrations/sqlite/
 	go-bindata -o storage/migrations/postgres/postgres_migrations.go -pkg postgres_migrations -prefix "storage/migrations/postgres/" storage/migrations/postgres/
 
@@ -19,10 +19,10 @@ test: generate
 test-nodocker: generate
 	go test -count=1 -v -tags=nodocker ./...
 
-lint: tools
+lint:
 	golangci-lint run
 
-typescript: tools
+typescript:
 	go run ./typescriptify
 
 run: tools
