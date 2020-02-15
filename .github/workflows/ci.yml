@@ -1,0 +1,18 @@
+name: CI
+on:
+  push:
+    branches:
+      - ci
+env:
+  PROJ_VERSION: 6.3.1
+jobs:
+  build_proj:
+    name: Build proj from sources
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download
+        run: |
+          pwd
+          ls
+          sudo curl https://download.osgeo.org/proj/proj-${PROJ_VERSION}.tar.gz | tar -xz
+          ls
