@@ -17,6 +17,10 @@ jobs:
           curl -o datum.zip https://download.osgeo.org/proj/proj-datumgrid-${PROJ_DATUM}.zip
           unzip -o datum.zip -d proj-${PROJ_VERSION}/data
           rm -f datum.zip
+      - name: Install requirements
+        run: |
+          apt-get update -y
+          apt-get install -y --fix-missing --no-install-recommends sqlite3
       - name: build
         run: |
           cd proj-${PROJ_VERSION}
