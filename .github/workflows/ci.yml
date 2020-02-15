@@ -8,6 +8,8 @@ jobs:
     name: Build proj from sources
     runs-on: ubuntu-latest
     steps:
+      - name: Check out
+        uses: actions/checkout@v1
       - name: Fetch libproj
         uses: ./.github/actions/libproj
       - name: Check result
