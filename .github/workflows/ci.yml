@@ -18,9 +18,9 @@ jobs:
         uses: actions/cache@v1
         with:
           path: ${{ github.workspace }}/libproj
-          key: ${{ runner.os }}-libproj-6_3_1 # 6.3.1 stands for libproj version
+          key: ${{ runner.os }}-cache-libproj-6_3_1 # 6.3.1 stands for libproj version
           restore-keys: |
-            ${{ runner.os }}-libproj-
+            ${{ runner.os }}-cache-libproj-
 
       - name: Fetch libproj
         if: steps.cache-libproj.outputs.cache-hit != 'true'
@@ -45,10 +45,10 @@ jobs:
         uses: actions/cache@v1
         id: cache-go
         with:
-          path: ~/go/pkg/mod
-          key: ${{ runner.os }}-go-${{ hashFiles('**/go.sum') }}
+          path: $GOPATH/pkg/mod
+          key: ${{ runner.os }}-gomod-${{ hashFiles('**/go.sum') }}
           restore-keys: |
-            ${{ runner.os }}-go-
+            ${{ runner.os }}-gomod-
 
       - name: Download go modules
         if: steps.cache-go.outputs.cache-hit != 'true'
@@ -56,6 +56,6 @@ jobs:
 
       - name: Test
         run: |
-          ls -la
-          echo $GOBIN
-          printenv | grep GO
+          make lint
+          make test
+          make typescript
