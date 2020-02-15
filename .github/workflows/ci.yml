@@ -19,14 +19,18 @@ jobs:
           rm -f datum.zip
       - name: Install requirements
         run: |
-          sudo apt-get update -y
-          sudo apt-get install -y --fix-missing --no-install-recommends sqlite3
+          apt-get update -y \
+          && apt-get install -y --fix-missing --no-install-recommends \
+                  software-properties-common build-essential ca-certificates \
+                  make cmake wget unzip libtool automake \
+                  zlib1g-dev libsqlite3-dev pkg-config sqlite3 libcurl4-gnutls-dev \
+                  libtiff5-dev
       - name: build
+        env:
+          DESTDIR: /build
         run: |
-          cd proj-${PROJ_VERSION}
-          mkdir build
-          cd build
-          cmake ..
-          cmake --build .
-          ls -la /usr/lib/
-          ls -la /usr/lib/x86_64-linux-gnu/
+          cd proj-${PROJ_VERSION} \
+          && ./autogen.sh \
+          && ./configure --prefix=/usr \
+          && make -j$(nproc) \
+          && make install
