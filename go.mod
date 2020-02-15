@@ -2,18 +2,6 @@ module github.com/whitewater-guide/gorge
 
 go 1.13
 
-replace (
-	github.com/Sirupsen/logrus => github.com/sirupsen/logrus v1.4.2
-	github.com/codegangsta/cli => github.com/urfave/cli v1.22.2
-	github.com/containerd/containerd v1.3.0-0.20190507210959-7c1e88399ec0 => github.com/containerd/containerd v1.3.0-beta.2.0.20190823190603-4a2f61c4f2b4
-	github.com/docker/docker => github.com/moby/moby v0.7.3-0.20190826074503-38ab9da00309
-	github.com/nats-io/go-nats => github.com/nats-io/nats.go v1.8.1
-	github.com/uber-go/atomic => go.uber.org/atomic v1.5.1
-	golang.org/x/crypto v0.0.0-20190129210102-0709b304e793 => golang.org/x/crypto v0.0.0-20180904163835-0709b304e793
-	google.golang.org/cloud => cloud.google.com/go v0.53.0
-	google.golang.org/cloud/storage => cloud.google.com/go/storage v1.5.0
-)
-
 require (
 	github.com/AlecAivazis/survey/v2 v2.0.5
 	github.com/Azure/azure-sdk-for-go v39.1.0+incompatible // indirect

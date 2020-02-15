@@ -30,11 +30,11 @@ jobs:
         run: |
           sudo cp $GITHUB_WORKSPACE/libproj/* /usr/lib
 
-      # - name: setup env
-      #   shell: bash
-      #   run: |
-      #     echo "::set-env name=GOPATH::${{ github.workspace }}/go"
-      #     echo "::add-path::${{ github.workspace }}/go/bin"
+      - name: setup env
+        run: |
+          echo "::set-env name=GOPATH::$(go env GOPATH)"
+          echo "::add-path::$(go env GOPATH)/bin"
+        shell: bash
 
       - name: Install Go
         uses: actions/setup-go@v2-beta
@@ -58,4 +58,4 @@ jobs:
         run: |
           ls -la
           echo $GOBIN
-          printenv
+          printenv | grep GO
