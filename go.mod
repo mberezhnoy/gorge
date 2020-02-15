@@ -61,4 +61,5 @@ replace (
 	google.golang.org/cloud => cloud.google.com/go v0.53.0
 	google.golang.org/cloud/storage => cloud.google.com/go/storage v1.5.0
 	github.com/Sirupsen/logrus => github.com/sirupsen/logrus v1.4.2
- )
+	github.com/codegangsta/cli => github.com/urfave/cli v1.22.2
+)
