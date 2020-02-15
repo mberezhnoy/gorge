@@ -14,12 +14,7 @@ jobs:
         uses: ./.github/actions/libproj
       - name: Install lib
         run: |
-          echo "$GITHUB_WORKSPACE"
-          echo "$HOME"
-          ls -la $GITHUB_WORKSPACE
-          ls -la $HOME
-          ls -la /github/home/
           sudo mkdir -p /usr/lib/x86_64-linux-gnu/
-          sudo cp $HOME/libproj/* /usr/lib/x86_64-linux-gnu/
-          rm -rf $HOME/libproj
+          sudo cp $GITHUB_WORKSPACE/libproj/* /usr/lib/x86_64-linux-gnu/
+          rm -rf $GITHUB_WORKSPACE/libproj
           ls -la /usr/lib/x86_64-linux-gnu/ | grep proj
