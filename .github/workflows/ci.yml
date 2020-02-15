@@ -5,6 +5,7 @@ on:
       - ci
 env:
   PROJ_VERSION: 6.3.1
+  PROJ_DATUM: 1.8
 jobs:
   build_proj:
     name: Build proj from sources
@@ -12,7 +13,16 @@ jobs:
     steps:
       - name: Download
         run: |
-          pwd
-          ls
-          sudo curl https://download.osgeo.org/proj/proj-${PROJ_VERSION}.tar.gz | tar -xz
-          ls
+          curl https://download.osgeo.org/proj/proj-${PROJ_VERSION}.tar.gz | tar -xz
+          curl -o datum.zip https://download.osgeo.org/proj/proj-datumgrid-${PROJ_DATUM}.zip
+          unzip datum.zip -d proj-${PROJ_VERSION}/data
+          rm -f datum.zip
+      - name: build
+        run: |
+          cd proj-${PROJ_VERSION}
+          mkdir build
+          cd build
+          cmake ..
+          cmake --build .
+          ls -la /usr/lib/
+          ls -la /usr/lib/x86_64-linux-gnu/
