@@ -55,4 +55,7 @@ jobs:
         run: make download
 
       - name: Test
-        run: ls -la
+        run: |
+          ls -la
+          echo $GOBIN
+          printenv
