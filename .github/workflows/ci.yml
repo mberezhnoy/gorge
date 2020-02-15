@@ -12,5 +12,9 @@ jobs:
         uses: actions/checkout@v1
       - name: Fetch libproj
         uses: ./.github/actions/libproj
-      - name: Check result
-        run: ls -la /proj
+      - name: Install lib
+        run: |
+          sudo mkdir -p /usr/lib/x86_64-linux-gnu/
+          sudo cp ./proj/* /usr/lib/x86_64-linux-gnu/
+          rm -rf ./proj
+          ls -la /usr/lib/x86_64-linux-gnu/
