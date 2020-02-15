@@ -5,6 +5,7 @@ on:
       - ci
 env:
   GO111MODULE: on
+  GOPROXY: https://goproxy.io
 jobs:
   build_proj:
     name: Build proj from sources
