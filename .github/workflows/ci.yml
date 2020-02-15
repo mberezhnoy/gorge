@@ -16,5 +16,5 @@ jobs:
         run: |
           sudo mkdir -p /usr/lib/x86_64-linux-gnu/
           sudo cp $GITHUB_WORKSPACE/libproj/* /usr/lib/x86_64-linux-gnu/
-          rm -rf $GITHUB_WORKSPACE/libproj
+          sudo rm -rf $GITHUB_WORKSPACE/libproj
           ls -la /usr/lib/x86_64-linux-gnu/ | grep proj
