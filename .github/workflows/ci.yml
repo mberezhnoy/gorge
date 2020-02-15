@@ -13,4 +13,4 @@ jobs:
       - name: Fetch libproj
         uses: ./.github/actions/libproj
       - name: Check result
-        run: ls -la
+        run: ls -la /proj
