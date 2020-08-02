@@ -3,6 +3,8 @@ package proj
 /*
 #cgo LDFLAGS: /usr/local/lib/libproj.a
 #cgo LDFLAGS: -lm
+#cgo LDFLAGS: -lstdc++
+#cgo LDFLAGS: -lsqlite3
 #include "proj_go.h"
 */
 import "C"
